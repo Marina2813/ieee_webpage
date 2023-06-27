@@ -13,8 +13,7 @@ body{
     font-size: 24px;
     margin-bottom: 20px;
   }
-
-  /* Custom properties/variables  */
+  
 :root {
   --main-white: #070423;
   --main-red: #fafafa;
@@ -22,13 +21,10 @@ body{
   --main-gray: #303841;
 }
 
-/* Base reset */
 * {
   margin: 0;
   padding: 0;
 }
-
-/* box-sizing and font sizing */
 *,
 *::before,
 *::after {
@@ -37,31 +33,10 @@ body{
 
 html {
   box-sizing: border-box;
-
-  /* Set font size for easy rem calculations
-   * default document font size = 16px, 1rem = 16px, 100% = 16px
-   * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
-  */
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
-/* A few media query to set some font sizes at different screen sizes.
- * This helps automate a bit of responsiveness.
- * The trick is to use the rem unit for size values, margin and padding.
- * Because rem is relative to the document font size
- * when we scale up or down the font size on the document
- * it will affect all properties using rem units for the values.
-*/
-
-/* I am using the em unit for breakpoints
- * The calculation is the following
- * screen size divided by browser base font size
- * As an example: a breakpoint at 980px
- * 980px / 16px = 61.25em
-*/
-
-/* 1200px / 16px = 75em */
 @media (max-width: 75em) {
   html {
     font-size: 60%;
@@ -171,17 +146,50 @@ img {
     100% {
       opacity: 0;
     }
+    
+  }
+
+  @keyframes effect {
+    0% {
+      opacity: 0;
+      color: rgb(15, 2, 30);
+    }
+    50% {
+      opacity: 1;
+      color: rgb(5, 5, 121);
+    }
+    100% {
+      opacity: 0;
+      color: rgb(67, 9, 194);
+    }
   }
   
   .coming-soon {
-    font-size: 100px;
+    font-size: 80px;
     text-align: center;
     font-family:'Caprasimo';
     color: #020202;
     position: absolute;
-    top:40%;
-    bottom: 55%;
-    right: 25%;
-    animation: fadeInOut 2s ease-in-out infinite;
+    top:30%;
+    bottom: 70%;
+    right: 72%;
+    left: 10%;
+    animation: effect 2s infinite;
   }
+
+  .coming-soon1 {
+    font-size: 80px;
+    text-align: center;
+    font-family:'Caprasimo';
+    color: #020202;
+    position: absolute;
+    top:65%;
+    bottom: 35%;
+    right: 10%;
+    left: 65%;
+    animation: effect 2s infinite;
+  }
+
+ 
+  
   

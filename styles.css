@@ -120,14 +120,6 @@
     background: var(--main-blue);
   }
   
-  .logo-link {
-    margin-right: 20px; 
-  }
-  
-  .logo-link img {
-    width: 30px; 
-    height: auto;
-  }
   /* Welcome section */
   
   .welcome-section {
